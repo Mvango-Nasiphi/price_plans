@@ -1,0 +1,41 @@
+POST http://localhost:6080/api/phonebill/ HTTP/1.1
+content-type: application/json
+
+{
+    "price_plan": "sms 101",
+    "actions" : "call, sms, call"
+}
+
+###
+
+GET http://localhost:6080/api/price_plans
+
+
+###
+
+POST http://localhost:6080/api/price_plan/update
+content-type: application/json
+
+{
+    "price_plan": "sms 101",
+    "sms_price" : 0.37,
+    "call_price" : 1.28
+}
+
+###
+
+POST http://localhost:6080/api/price_plan/delete
+Content-Type: application/json
+
+{
+    "id": 3
+}
+
+
+POST http://localhost:6080/api/price-plan/insert
+
+{
+    "price_plan": "sms 303",
+    "sms_price" : 0.37,
+    "call_price" : 1.28
+}
